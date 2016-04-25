@@ -1,0 +1,8 @@
+{
+    "name": "codeigniter/codeigniter",
+    "type": "project",
+    "description" : "Install codeigniter.",
+    "require": {
+        "codeigniter/framework": "dev-master"
+    }
+}
