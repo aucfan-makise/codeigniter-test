@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Welcome_test" file="/deploy/codeigniter-test/application/tests/controllers/Welcome_test.php" tests="1" assertions="1" failures="0" errors="0" time="0.018694">
+    <testcase name="test_APPPATH" class="Welcome_test" file="/deploy/codeigniter-test/application/tests/controllers/Welcome_test.php" line="25" assertions="1" time="0.018694">
+      <system-out>/deploy/codeigniter-test/application/tests/controllers/Welcome_test.php:28:
+string(36) "/deploy/codeigniter-test/application"
+</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
