@@ -4,5 +4,9 @@
     "description" : "Install codeigniter.",
     "require": {
         "codeigniter/framework": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.3.*",
+        "kenjis/ci-phpunit-test": "dev-master"
     }
 }
