@@ -369,3 +369,27 @@ CIPHPUnitTest::init([
 	APPPATH.'modules',
 ]);
 */
+
+/*
+ * -------------------------------------------------------------------
+ *  Configure AspectMock
+ * -------------------------------------------------------------------
+ */
+if (class_exists('AspectMock\Kernel'))
+{
+	$kernel = \AspectMock\Kernel::getInstance();
+	$kernel->init([
+		'debug' => true,
+		'appDir' => APPPATH,
+		'includePaths' => array(
+			APPPATH,
+			BASEPATH
+		),
+		'excludePaths' => array(
+			APPPATH . 'tests/'
+		),
+		'cacheDir' => APPPATH . 'tests/AspectMock',
+	]);
+
+	$kernel->loadPhpFiles(APPPATH . 'controllers');
+}

@@ -7,6 +7,7 @@
  * @copyright  2015 Kenji Suzuki
  * @link       https://github.com/kenjis/ci-phpunit-test
  */
+use AspectMock\Test as test;
 
 class Welcome_test extends TestCase
 {
@@ -24,6 +25,10 @@ class Welcome_test extends TestCase
 
 	public function test_APPPATH()
 	{
+		$rs = test::double('\Welcome', ['printtest' => 'printest2']);
+		var_dump($rs);
+		$obj = new Welcome();
+		var_dump($obj->main());
 		$actual = realpath(APPPATH);
 		$expected = realpath(__DIR__ . '/../..');
 		$this->assertEquals(
@@ -31,5 +36,10 @@ class Welcome_test extends TestCase
 			$actual,
 			'Your APPPATH seems to be wrong. Check your $application_folder in tests/Bootstrap.php'
 		);
+	}
+
+	protected function tearDown()
+	{
+		test::clean();
 	}
 }
